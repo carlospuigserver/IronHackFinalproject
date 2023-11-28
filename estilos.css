@@ -40,6 +40,12 @@ footer {
     font-size: 40px;
 }
 
+#nivel-indicador {
+    color: #580078;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .btn {
     border: none;
     background: #580078;
@@ -56,20 +62,17 @@ footer {
 
 /* PANTALLA JUEGO */
 .pantalla-juego {
-    display: none;
-}
-
-.pantalla-juego {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
 }
 
 .pantalla-juego img {
-    max-width: 600px;
-    width: 100%;
+    max-width: 100%; /* Cambiado a 100% para que todas las imágenes tengan el mismo tamaño */
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .opciones {
@@ -84,6 +87,12 @@ footer {
     max-width: 600px;
     margin: 20px auto;
     cursor: pointer;
+}
+
+.opcion:hover .nombre,
+.opcion:hover .letra {
+    background-color: #580078;
+    color: #fff;
 }
 
 .opcion .letra {
@@ -112,17 +121,19 @@ footer {
 }
 
 /* Clases que se aplicarán cuando haya acertado la opción */
-.opcion.acertada .nombre,
-.opcion.acertada .letra {
+.opcion.correcta .nombre,
+.opcion.correcta .letra {
     background-color: yellowgreen;
     color: #fff;
+    box-shadow: 0 0 20px yellowgreen;
 }
 
 /* Clases que se aplicarán cuando se equivoque en la opción elegida */
-.opcion.no-acertada .nombre,
-.opcion.no-acertada .letra {
+.opcion.incorrecta .nombre,
+.opcion.incorrecta .letra {
     background-color: darkred;
     color: #fff;
+    box-shadow: 0 0 20px darkred;
 }
 
 /* PANTALLA FINAL */
