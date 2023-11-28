@@ -10,7 +10,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
+    background-color: #ADD8E6; /* Fondo azul celeste más claro */
 }
+
 
 h1 {
     width: fit-content;
