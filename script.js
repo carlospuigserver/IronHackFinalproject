@@ -2,7 +2,7 @@
 let futbolistas = ["messi.jpg", "ronaldo.jpg", "neymar.jpg", "aguirretxe.jpg", "duda.jpg", "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"];
 
 // Arreglo que guardará la opción correcta para cada futbolista.
-let correcta = [0, 0, 2, 1, 0, 1, 1, 1, 1, 1];
+let correcta = [1, 1, 2, 1, 0, 1, 1, 1, 1, 1];
 
 // Arreglo que guardará los nombres de los futbolistas a mostrar en cada jugada.
 let opciones = [];
