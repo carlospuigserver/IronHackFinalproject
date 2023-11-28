@@ -1,52 +1,55 @@
-//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["pa.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
+// Cargo en un arreglo las imágenes de los futbolistas. Este será el orden que se mostrarán.
+let futbolistas = ["messi.jpg", "ronaldo.jpg", "neymar.jpg", "aguirretxe.jpg", "duda.jpg", "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"];
 
-//arreglo que guardara la opcion correcta
-let correcta = [2,2,1,1,0];
+// Arreglo que guardará la opción correcta para cada futbolista.
+let correcta = [0, 1, 2, 1, 0, 1, 1, 1, 1, 1];
 
-//arreglo que guardara los paises a mostrar en cada jugada
+// Arreglo que guardará los nombres de los futbolistas a mostrar en cada jugada.
 let opciones = [];
-//cargo en el arreglo opciones las opciones a mostrar en cada jugada
-opciones.push(["SUDAFRICA", "SINGAPUR", "PANAMA"]);
-opciones.push(["PERU", "ITALIA", "BOLIVIA"]);
-opciones.push(["TUNEZ", "ANDORRA", "ANTIGUA Y BARBUDA"]);
-opciones.push(["UCRANIA", "REINO UNIDO", "MADAGASCAR"]);
-opciones.push(["NAMIBIA", "OMAN", "ETIOPIA"]);
+// Cargo en el arreglo opciones los nombres a mostrar en cada jugada.
+opciones.push(["Messi", "Ronaldo", "Neymar"]);
+opciones.push(["Ronaldo", "Messi", "Neymar"]);
+opciones.push(["Neymar", "Messi", "Ronaldo"]);
+opciones.push(["Aguirretxe", "Messi", "Neymar"]);
+opciones.push(["Duda", "Ronaldo", "Neymar"]);
+opciones.push(["Messi", "Samper", "Neymar"]);
+opciones.push(["Messi", "Douglas", "Neymar"]);
+opciones.push(["Messi", "Granero", "Neymar"]);
+opciones.push(["Messi", "Altintop", "Neymar"]);
+opciones.push(["Messi", "Mathieu", "Neymar"]);
 
-//variable que guarda la posicion actual
+// Variable que guarda la posición actual.
 let posActual = 0;
-//variable que guarda la cantidad acertadas hasta el moemento
+// Variable que guarda la cantidad acertadas hasta el momento.
 let cantidadAcertadas = 0;
 
-function comenzarJuego(){
-    //reseteamos las variables
+function comenzarJuego() {
+    // Reseteamos las variables.
     posActual = 0;
     cantidadAcertadas = 0;
-    //activamos las pantallas necesarias
+    // Activamos las pantallas necesarias.
     document.getElementById("pantalla-inicial").style.display = "none";
     document.getElementById("pantalla-juego").style.display = "block";
-    cargarBandera();
-
+    cargarFutbolista();
 }
 
-//funcion que carga la siguiente bandera y sus opciones
-function cargarBandera(){
-    //controlo sis se acabaron las banderas
-    if(banderas.length <= posActual){
+// Función que carga el siguiente futbolista y sus opciones.
+function cargarFutbolista() {
+    // Controlamos si se han acabado los futbolistas.
+    if (futbolistas.length <= posActual) {
         terminarJuego();
-    }
-    else{//cargo las opciones
-        //limpiamos las clases que se asignaron
+    } else {
+        // Limpiamos las clases que se asignaron.
         limpiarOpciones();
 
-        document.getElementById("imgBandera").src = "img/" + banderas[posActual];
+        document.getElementById("imgFutbolista").src = "img/" + futbolistas[posActual];
         document.getElementById("n0").innerHTML = opciones[posActual][0];
         document.getElementById("n1").innerHTML = opciones[posActual][1];
         document.getElementById("n2").innerHTML = opciones[posActual][2];
     }
 }
 
-function limpiarOpciones(){
+function limpiarOpciones() {
     document.getElementById("n0").className = "nombre";
     document.getElementById("n1").className = "nombre";
     document.getElementById("n2").className = "nombre";
@@ -56,36 +59,37 @@ function limpiarOpciones(){
     document.getElementById("l2").className = "letra";
 }
 
-function comprobarRespuesta(opElegida){
-    if(opElegida==correcta[posActual]){//acertó
-        //agregamos las clases para colocar el color verde a la opcion elegida
+function comprobarRespuesta(opElegida) {
+    if (opElegida == correcta[posActual]) { // Acertó.
+        // Agregamos las clases para colocar el color verde a la opción elegida.
         document.getElementById("n" + opElegida).className = "nombre nombreAcertada";
         document.getElementById("l" + opElegida).className = "letra letraAcertada";
         cantidadAcertadas++;
-    }else{//no acerto
-        //agramos las clases para colocar en rojo la opcion elegida
+    } else { // No acertó.
+        // Agregamos las clases para colocar en rojo la opción elegida.
         document.getElementById("n" + opElegida).className = "nombre nombreNoAcertada";
         document.getElementById("l" + opElegida).className = "letra letraNoAcertada";
 
-        //opcion que era correcta
+        // Opción que era correcta.
         document.getElementById("n" + correcta[posActual]).className = "nombre nombreAcertada";
         document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
     }
     posActual++;
-    //Esperamos 1 segundo y pasamos mostrar la siguiente bandera y sus opciones
-    setTimeout(cargarBandera,1000);
-}
-function terminarJuego(){
-    //ocultamos las pantallas y mostramos la pantalla final
-    document.getElementById("pantalla-juego").style.display = "none";
-    document.getElementById("pantalla-final").style.display = "block";
-    //agreamos los resultados
-    document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
-    document.getElementById("numIncorrectas").innerHTML = banderas.length - cantidadAcertadas;
+    // Esperamos 1 segundo y pasamos a mostrar la siguiente futbolista y sus opciones.
+    setTimeout(cargarFutbolista, 1000);
 }
 
-function volverAlInicio(){
-    //ocultamos las pantallas y activamos la inicial
+function terminarJuego() {
+    // Ocultamos las pantallas y mostramos la pantalla final.
+    document.getElementById("pantalla-juego").style.display = "none";
+    document.getElementById("pantalla-final").style.display = "block";
+    // Agregamos los resultados.
+    document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
+    document.getElementById("numIncorrectas").innerHTML = futbolistas.length - cantidadAcertadas;
+}
+
+function volverAlInicio() {
+    // Ocultamos las pantallas y activamos la inicial.
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";
