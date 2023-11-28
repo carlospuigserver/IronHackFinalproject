@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     font-family: 'Mochiy Pop One';
 }
-body{
+
+body {
     background: url(img/fondo.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
 }
-h1{
+
+h1 {
     width: fit-content;
     background-color: #fff;
     margin: 40px auto;
@@ -17,29 +20,28 @@ h1{
     box-shadow: 5px 5px 0 #000;
     padding: 20px 30px;
 }
-footer{
+
+footer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #000;
-    color: #000;
-    font-size: 12px;
     color: #fff;
+    font-size: 12px;
     padding: 10px;
     text-align: center;
 }
 
 /* PANTALLA INICIO */
-#pantalla-inicial{
+#pantalla-inicial {
     display: block;
     text-align: center;
     font-size: 30px;
-}
-#pantalla-inicial{
     margin: 60px 0;
 }
-.btn{
+
+.btn {
     border: none;
     background: #580078;
     color: #fff;
@@ -48,30 +50,29 @@ footer{
     cursor: pointer;
     transition: .5s;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.1);
 }
 
-
-
-/* PANTALLA juego */
-#pantalla-juego{
-    display: none;
-}
-.pantalla-juego{
+/* PANTALLA JUEGO */
+.pantalla-juego {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
 }
-.pantalla-juego img{
+
+.pantalla-juego img {
     max-width: 400px;
     width: 100%;
 }
-.opciones{
+
+.opciones {
     max-width: 400px;
     margin: auto;
 }
-.opcion{
+
+.opcion {
     display: flex;
     position: relative;
     align-items: center;
@@ -79,7 +80,8 @@ footer{
     margin: 30px auto;
     cursor: pointer;
 }
-.opcion .letra{
+
+.opcion .letra {
     background-color: #580078;
     width: 50px;
     height: 50px;
@@ -92,7 +94,8 @@ footer{
     border: 5px solid #fff;
     position: relative;
 }
-.opcion .nombre{
+
+.opcion .nombre {
     background: #fff;
     width: 100%;
     font-size: 25px;
@@ -102,46 +105,40 @@ footer{
     border-radius: 0 20px 20px 0;
     padding: 7px 0 7px 30px;
 }
-/* clases que se aplicará cuando haya acertada la opcion  */
-.opcion .nombreAcertada{
+
+/* Clases que se aplicarán cuando haya acertado la opción */
+.opcion.acertada .nombre,
+.opcion.acertada .letra {
     background-color: yellowgreen;
     color: #fff;
 }
-.opcion .letraAcertada{
-    background-color: yellowgreen;
-    color: #fff ;
-}
-/* clases que se aplicaran cuando se equivoque en la opcion elegida */
-.opcion .nombreNoAcertada{
-    background-color: darkred;
-    color: #fff;
-}
-.opcion .letraNoAcertada{
+
+/* Clases que se aplicarán cuando se equivoque en la opción elegida */
+.opcion.no-acertada .nombre,
+.opcion.no-acertada .letra {
     background-color: darkred;
     color: #fff;
 }
 
-
-
-
-/* PANTALLA final */
-#pantalla-final{
+/* PANTALLA FINAL */
+#pantalla-final {
     display: none;
     text-align: center;
 }
-#pantalla-final #numCorrectas{
-    background-color: chartreuse;
+
+#pantalla-final #numCorrectas,
+#pantalla-final #numIncorrectas {
     display: inline-block;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 5px solid #fff;
 }
-#pantalla-final #numIncorrectas{
+
+#pantalla-final #numCorrectas {
+    background-color: chartreuse;
+}
+
+#pantalla-final #numIncorrectas {
     background-color: darkred;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 5px solid #fff;
 }

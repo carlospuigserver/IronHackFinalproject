@@ -9,14 +9,14 @@ let opciones = [];
 // Cargo en el arreglo opciones los nombres a mostrar en cada jugada.
 opciones.push(["Figo", "Cristiano Ronaldo", "Ronaldo Nazario"]);
 opciones.push(["Maradona", "Messi", "Riquelme"]);
-opciones.push(["Messi", "Ronaldo", "Neymar"]);
-opciones.push(["Messi", "Aguirretxe", "Neymar"]);
-opciones.push(["Duda", "Ronaldo", "Neymar"]);
-opciones.push(["Messi", "Samper", "Neymar"]);
-opciones.push(["Messi", "Douglas", "Neymar"]);
-opciones.push(["Messi", "Granero", "Neymar"]);
-opciones.push(["Messi", "Altintop", "Neymar"]);
-opciones.push(["Messi", "Mathieu", "Neymar"]);
+opciones.push(["Garrincha", "Romario", "Neymar"]);
+opciones.push(["Zurutuza", "Aguirretxe", "Xabi Prieto"]);
+opciones.push(["Duda", "Hélder Postiga", "Raúl Meireles"]);
+opciones.push(["Montoya", "Samper", "Aleñà"]);
+opciones.push(["Adriano", "Douglas", "Paulinho"]);
+opciones.push(["Canales", "Granero", "Negredo"]);
+opciones.push(["Sokratis", "Altintop", "Konoplyanka"]);
+opciones.push(["Lenglet", "Mathieu", "Umtiti"]);
 
 // Variable que guarda la posición actual.
 let posActual = 0;
