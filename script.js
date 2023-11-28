@@ -1,5 +1,5 @@
 // Cargo en un arreglo las imágenes de los futbolistas. Este será el orden que se mostrarán.
-let futbolistas = ["messi.jpg", "ronaldo.jpg", "neymar.jpg", "aguirretxe.jpg", "duda.jpg", "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"];
+let futbolistas = [ "ronaldo.jpg","messi.jpg", "neymar.jpg", "aguirretxe.jpg", "duda.jpg", "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"];
 
 // Arreglo que guardará la opción correcta para cada futbolista.
 let correcta = [1, 1, 2, 1, 0, 1, 1, 1, 1, 1];
@@ -7,8 +7,8 @@ let correcta = [1, 1, 2, 1, 0, 1, 1, 1, 1, 1];
 // Arreglo que guardará los nombres de los futbolistas a mostrar en cada jugada.
 let opciones = [];
 // Cargo en el arreglo opciones los nombres a mostrar en cada jugada.
-opciones.push(["Messi", "Ronaldo", "Neymar"]);
-opciones.push(["Ronaldo", "Messi", "Neymar"]);
+opciones.push(["Figo", "Cristiano Ronaldo", "Ronaldo Nazario"]);
+opciones.push(["Maradona", "Messi", "Riquelme"]);
 opciones.push(["Messi", "Ronaldo", "Neymar"]);
 opciones.push(["Messi", "Aguirretxe", "Neymar"]);
 opciones.push(["Duda", "Ronaldo", "Neymar"]);
