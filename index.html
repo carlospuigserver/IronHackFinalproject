@@ -5,44 +5,217 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>ADIVINA LA BANDERA</title>
+    <title>ADIVINA EL FUTBOLISTA</title>
 </head>
 <body>
-    <h1>ADIVINA LA BANDERA</h1>
+    <h1>ADIVINA EL FUTBOLISTA</h1>
 
     <!-- Pantalla inicial -->
     <div id="pantalla-inicial">
-        <p>¿A qué pais pertenece la bandera?</p>
+        <p>¿A qué futbolista pertenece la imagen?</p>
         <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
     </div>
 
     <!-- Pantalla juego -->
     <div class="pantalla-juego" id="pantalla-juego">
-        <img src="img/ad.svg" alt="" id="imgBandera">
+        <img src="img/messi.jpg" alt="" id="imgFutbolista">
         <div class="opciones">
             <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
                 <div class="letra" id="l0">A</div>
-                <div class="nombre" id="n0">OPCION A</div>
+                <div class="nombre" id="n0">Messi</div>
             </div>
             <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
                 <div class="letra" id="l1">B</div>
-                <div class="nombre" id="n1">OPCION B</div>
+                <div class="nombre" id="n1">Ronaldo</div>
             </div>
             <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
                 <div class="letra" id="l2">C</div>
-                <div class="nombre" id="n2">OPCION C</div>
+                <div class="nombre" id="n2">Neymar</div>
             </div>
         </div>
     </div>
-    <!-- Pantalla final -->
-    <div id="pantalla-final">
-        <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
-        <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
-        <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+
+    
+    <!-- Futbolista 2 -->
+    <div class="pantalla-juego" id="pantalla-juego-2" style="display: none;">
+        <img src="img/ronaldo.jpg" alt="" id="imgFutbolista2">
+        <div class="opciones">
+            <div class="opcion" id="op3" onclick="comprobarRespuesta(3)">
+                <div class="letra" id="l3">A</div>
+                <div class="nombre" id="n3">Ronaldo</div>
+            </div>
+            <div class="opcion" id="op4" onclick="comprobarRespuesta(4)">
+                <div class="letra" id="l4">B</div>
+                <div class="nombre" id="n4">Messi</div>
+            </div>
+            <div class="opcion" id="op5" onclick="comprobarRespuesta(5)">
+                <div class="letra" id="l5">C</div>
+                <div class="nombre" id="n5">Neymar</div>
+            </div>
+        </div>
     </div>
 
     
     
+    
+    <!-- Futbolista 3 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/neymar.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 4 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/aguirretxe.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futbolista 5 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/duda.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 6 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/samper.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 7 -->
+    <div class="callejon-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/neymar.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futbolista 8 -->
+    <div class="douglas-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/neymar.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 9 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/altintop.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 10 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/mathieu.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op6" onclick="comprobarRespuesta(6)">
+                <div class="letra" id="l6">A</div>
+                <div class="nombre" id="n6">Neymar</div>
+            </div>
+            <div class="opcion" id="op7" onclick="comprobarRespuesta(7)">
+                <div class="letra" id="l7">B</div>
+                <div class="nombre" id="n7">Messi</div>
+            </div>
+            <div class="opcion" id="op8" onclick="comprobarRespuesta(8)">
+                <div class="letra" id="l8">C</div>
+                <div class="nombre" id="n8">Ronaldo</div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
