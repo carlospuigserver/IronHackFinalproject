@@ -59,25 +59,49 @@ function limpiarOpciones() {
     document.getElementById("l2").className = "letra";
 }
 
+// ... (tu código existente)
+
 function comprobarRespuesta(opElegida) {
+    // Limpiamos las clases que se asignaron anteriormente.
+    limpiarOpciones();
+
     if (opElegida == correcta[posActual]) { // Acertó.
         // Agregamos las clases para colocar el color verde a la opción elegida.
-        document.getElementById("n" + opElegida).className = "nombre nombreAcertada";
-        document.getElementById("l" + opElegida).className = "letra letraAcertada";
+        document.getElementById("n" + opElegida).classList.add("nombreAcertada");
+        document.getElementById("l" + opElegida).classList.add("letraAcertada");
+        document.getElementById("op" + opElegida).classList.add("correcta");
         cantidadAcertadas++;
     } else { // No acertó.
         // Agregamos las clases para colocar en rojo la opción elegida.
-        document.getElementById("n" + opElegida).className = "nombre nombreNoAcertada";
-        document.getElementById("l" + opElegida).className = "letra letraNoAcertada";
+        document.getElementById("n" + opElegida).classList.add("nombreNoAcertada");
+        document.getElementById("l" + opElegida).classList.add("letraNoAcertada");
+        document.getElementById("op" + opElegida).classList.add("incorrecta");
 
         // Opción que era correcta.
-        document.getElementById("n" + correcta[posActual]).className = "nombre nombreAcertada";
-        document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
+        document.getElementById("n" + correcta[posActual]).classList.add("nombreAcertada");
+        document.getElementById("l" + correcta[posActual]).classList.add("letraAcertada");
+        document.getElementById("op" + correcta[posActual]).classList.add("correcta");
     }
+
+    // Esperamos 1 segundo y limpiamos las clases.
+    setTimeout(limpiarOpciones, 1000);
+    
     posActual++;
-    // Esperamos 1 segundo y pasamos a mostrar la siguiente futbolista y sus opciones.
+    // Esperamos 1 segundo adicional y pasamos a mostrar la siguiente futbolista y sus opciones.
     setTimeout(cargarFutbolista, 1000);
 }
+
+function limpiarOpciones() {
+    // Limpiamos las clases de todas las opciones.
+    for (let i = 0; i < 3; i++) {
+        document.getElementById("n" + i).className = "nombre";
+        document.getElementById("l" + i).className = "letra";
+        document.getElementById("op" + i).classList.remove("correcta", "incorrecta");
+    }
+}
+
+
+
 
 function terminarJuego() {
     // Ocultamos las pantallas y mostramos la pantalla final.
