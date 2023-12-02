@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QUIZZ DE FÚTBOL - NIVEL 2</title>
+</head>
+
+<body>
+    <h1>QUIZZ DE FÚTBOL</h1>
+    <p id="nivel-indicador">Nivel 2</p>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>¿Adivinas quién soy?</p>
+        <button class="btn" id="btnComenzar">COMENZAR A JUGAR</button>
+    </div>
+
+    <!-- Pantalla de juego -->
+    <div class="pantalla-juego" id="pantalla-juego" style="display: none;">
+        <img src="" alt="" id="imgFutbolista">
+        <div class="nombre-input">
+            <label for="nombreFutbolista">Escribe el nombre del futbolista:</label>
+            <input type="text" id="nombreFutbolista" placeholder="Nombre">
+            <button id="btnComprobar">Comprobar</button>
+        </div>
+    </div>
+
+    <!-- Pantalla final -->
+    <div id="pantalla-final" style="display: none;">
+        <h2>Resultados</h2>
+        <p>Correctas: <span id="numCorrectas">0</span></p>
+        <p>Incorrectas: <span id="numIncorrectas">0</span></p>
+        <button class="btn" id="btnVolverAlInicio">Volver al Inicio</button>
+    </div>
+
+    <script src="archivo.js"></script>
+</body>
+
+</html>
