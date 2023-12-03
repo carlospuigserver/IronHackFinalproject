@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nuevo.css">
+ 
+    <title>QUIZZ DE FÚTBOL - NIVEL 1</title>
+</head>
+
+<body>
+    <h1>QUIZZ DE FÚTBOL</h1>
+    <p id="nivel-indicador">Nivel 1</p>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>¿Adivinas quien soy?</p>
+        <button class="btn" onclick="comenzarJuegoNivel1()">COMENZAR A JUGAR</button>
+    </div>
+    
+
+    <!-- Pantalla juego -->
+    <div class="pantalla-juego" id="pantalla-juego" style="display: none;">
+        <img src="img/ronaldo.jpg" alt="" id="imgFutbolista">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuestaNivel1(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Figo</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuestaNivel1(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Cristiano Ronaldo</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuestaNivel1(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Ronaldo Nazario</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Futbolista 2 -->
+    <div class="pantalla-juego" id="pantalla-juego-2" style="display: none;">
+        <img src= "img/messi.jpg" alt="" id="imgFutbolista2">
+        <div class="opciones">
+            <div class="opcion" id="op3" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l3">A</div>
+                <div class="nombre" id="n3">Maradona</div>
+            </div>
+            <div class="opcion" id="op4" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l4">B</div>
+                <div class="nombre" id="n4">Messi</div>
+            </div>
+            <div class="opcion" id="op5" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l5">C</div>
+                <div class="nombre" id="n5">Riquelme</div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <!-- Futbolista 3 -->
+    <div class="pantalla-juego" id="pantalla-juego-3" style="display: none;">
+        <img src="img/neymar.jpg" alt="" id="imgFutbolista3">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Garrincha</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Romario</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Neymar</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 4 -->
+    <div class="pantalla-juego" id="pantalla-juego-4" style="display: none;">
+        <img src="img/aguirretxe.jpg" alt="" id="imgFutbolista4">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Zurutuza</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Aguirretxe</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Xabi Prieto</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futbolista 5 -->
+    <div class="pantalla-juego" id="pantalla-juego-5" style="display: none;">
+        <img src="img/duda.jpg" alt="" id="imgFutbolista5">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Duda</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Hélder Postiga</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Raúl Meireles</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 6 -->
+    <div class="pantalla-juego" id="pantalla-juego-6" style="display: none;">
+        <img src="img/samper.jpg" alt="" id="imgFutbolista6">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Montoya</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Samper</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Aleñà</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 7 -->
+    <div class="callejon-juego" id="pantalla-juego-7" style="display: none;">
+        <img src="img/douglas.jpg" alt="" id="imgFutbolista7">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Adriano</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Douglas</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Paulinho</div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Futbolista 8 -->
+    <div class="douglas-juego" id="pantalla-juego-8" style="display: none;">
+        <img src="img/granero.jpg" alt="" id="imgFutbolista8">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Canales</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Granero</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Negredo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Futbolista 9 -->
+    <div class="pantalla-juego" id="pantalla-juego-9" style="display: none;">
+        <img src="img/altintop.jpg" alt="" id="imgFutbolista9">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Sokratis</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Altintop</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Konoplyanka</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futbolista 10 -->
+    <div class="pantalla-juego" id="pantalla-juego-10" style="display: none;">
+        <img src="img/mathieu.jpg" alt="" id="imgFutbolista10">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">Lenglet</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">Mathieu</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">Umtiti</div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Pantalla final -->
+ <div id="pantalla-final" style="display: none;">
+    <h2>Resultados</h2>
+    <p>Acertadas: <span id="numCorrectas">0</span></p>
+    <p>Incorrectas: <span id="numIncorrectas">0</span></p>
+    <button class="btn" onclick="irAlSiguienteNivel()">Siguiente Nivel</button>
+</div>
+
+
+ <!-- Pantalla inicial Nivel 2 -->
+ <div id="pantalla-inicial-nivel-2" style="display: none;">
+    <p>¿Adivinas quién soy? (Nivel 2)</p>
+    <button class="btn" onclick="comenzarJuegoNivel2()">COMENZAR A JUGAR (Nivel 2)</button>
+</div>
+
+<!-- Pantalla juego Nivel 2 -->
+<div class="pantalla-juego" id="pantalla-juego-nivel-2" style="display: none;">
+    <img src="" alt="" id="imgFutbolistaNivel2">
+    <div class="nombre-input">
+        <label for="nombreFutbolistaNivel2">Escribe el nombre del futbolista:</label>
+        <input type="text" id="nombreFutbolistaNivel2" placeholder="Nombre">
+        <button id="btnComprobarNivel2">Comprobar</button>
+    </div>
+</div>
+
+<!-- Pantalla final Nivel 2 -->
+<div id="pantalla-final-nivel-2" style="display: none;">
+    <h2>Resultados (Nivel 2)</h2>
+    <p>Correctas: <span id="numCorrectasNivel2">0</span></p>
+    <p>Incorrectas: <span id="numIncorrectasNivel2">0</span></p>
+    <button class="btn" onclick="volverAlInicioNivel2()">Volver al Inicio</button>
+</div>
+
+
+<script src="script-nuevo.js"></script>
+</body>
+
+</html>
