@@ -122,6 +122,7 @@ body {
     box-shadow: 0 0 20px #FF0000;
 }
 
+
 /* Pantalla final nivel 1 */
 #pantalla-final {
     display: none;
@@ -146,35 +147,16 @@ body {
     background-color: darkred;
 }
 
-/* Pantalla inicio nivel 2 */
+/* Nivel 2 */
 #pantalla-inicial-nivel-2 {
-    display: block;
+    display: none;
     text-align: center;
     font-size: 40px;
+    margin-top: 50px;
 }
 
-#nivel-indicador-nivel-2 {
-    color: #580078;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.btn-nivel-2 {
-    border: none;
-    background: #580078;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.btn-nivel-2:hover {
-    transform: scale(1.1);
-}
-
-/* Pantalla juego nivel 2 */
-.pantalla-juego-nivel-2 {
+#pantalla-juego-nivel-2 {
+    display: none;
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
@@ -186,78 +168,58 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-.nombre-input-nivel-2 {
+.nombre-input {
     margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.nombre-input-nivel-2 label {
+label {
     font-size: 24px;
-    margin-bottom: 10px;
-    display: block;
 }
 
-.nombre-input-nivel-2 input {
+#nombreFutbolistaNivel2 {
+    font-size: 20px;
     padding: 10px;
-    font-size: 18px;
-    width: 60%;
-    border: 1px solid #ddd;
-    border-radius: 10px;
 }
 
-.nombre-input-nivel-2 button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #580078;
-    color: #fff;
+#btnComprobarNivel2 {
     border: none;
-    border-radius: 5px;
+    background: #580078;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: .5s;
+    font-size: 18px;
     margin-top: 10px;
-    transition: background-color 0.3s ease-in-out;
 }
 
-.nombre-input-nivel-2 button:hover {
-    background-color: #401050;
+#btnComprobarNivel2:hover {
+    transform: scale(1.1);
 }
 
-.nombre-input-nivel-2 .correcto input {
-    border-color: #00FF00;
-}
-
-.nombre-input-nivel-2 .incorrecto input {
-    border-color: #FF0000;
-}
-
-/* Estilos para opciones correctas nivel 2 */
-.opcion-nivel-2.correcta .nombre-nivel-2,
-.opcion-nivel-2.correcta .letra-nivel-2,
-.correcto .nombre-input-nivel-2 input {
-    background-color: #00FF00; /* Verde */
-    color: #fff;
-    box-shadow: 0 0 20px #00FF00;
-}
-
-/* Estilos para opciones incorrectas nivel 2 */
-.opcion-nivel-2.incorrecta .nombre-nivel-2,
-.opcion-nivel-2.incorrecta .letra-nivel-2,
-.incorrecto .nombre-input-nivel-2 input {
-    background-color: #FF0000; /* Rojo */
-    color: #fff;
-    box-shadow: 0 0 20px #FF0000;
-}
-
-/* Pantalla final nivel 2 */
 #pantalla-final-nivel-2 {
     display: none;
     text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
 }
 
-#pantalla-final-nivel-2 #numCorrectasNivel2,
-#pantalla-final-nivel-2 #numIncorrectasNivel2 {
+#pantalla-final-nivel-2 h2 {
+    color: #580078;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#pantalla-final-nivel-2 p {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#numCorrectasNivel2,
+#numIncorrectasNivel2 {
     display: inline-block;
     width: 60px;
     height: 60px;
@@ -266,10 +228,26 @@ body {
     margin: 10px;
 }
 
-#pantalla-final-nivel-2 #numCorrectasNivel2 {
+#numCorrectasNivel2 {
     background-color: chartreuse;
 }
 
-#pantalla-final-nivel-2 #numIncorrectasNivel2 {
+#numIncorrectasNivel2 {
     background-color: darkred;
+}
+
+#btnVolverAlInicioNivel2 {
+    border: none;
+    background: #580078;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#btnVolverAlInicioNivel2:hover {
+    transform: scale(1.1);
 }
