@@ -147,6 +147,8 @@ body {
     background-color: darkred;
 }
 
+
+
 /* Nivel 2 */
 #pantalla-inicial-nivel-2 {
     display: none;
@@ -186,14 +188,23 @@ label {
 
 #btnComprobarNivel2 {
     border: none;
-    background: #580078;
-    color: #fff;
+    color: #ffffff;
     padding: 15px 30px;
     border-radius: 50px;
     cursor: pointer;
     transition: .5s;
     font-size: 18px;
     margin-top: 10px;
+}
+
+/* Estilos para botón correcto en nivel 2 */
+.correcto #btnComprobarNivel2 {
+    background-color: #00FF00; /* Verde */
+}
+
+/* Estilos para botón incorrecto en nivel 2 */
+.incorrecto #btnComprobarNivel2 {
+    background-color: #FF0000; /* Rojo */
 }
 
 #btnComprobarNivel2:hover {
