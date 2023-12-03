@@ -18,11 +18,9 @@ body {
     display: block;
     text-align: center;
     font-size: 40px;
+    position: relative;
 }
 
-.frase-pequena {
-    font-size: 14px; /* Puedes ajustar el valor según tu preferencia */
-}
 
 
 #nivel-indicador {
@@ -155,13 +153,13 @@ body {
 
 
 /* Nivel 2 */
+/* Pantalla inicial nivel 2 */
 #pantalla-inicial-nivel-2 {
     display: none;
     text-align: center;
     font-size: 40px;
     margin-top: 50px;
 }
-
 #pantalla-juego-nivel-2 {
     display: none;
     max-width: 800px;
