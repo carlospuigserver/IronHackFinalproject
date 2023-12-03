@@ -48,7 +48,7 @@ body {
 }
 
 #imgFutbolista {
-    max-width: 100%;
+    width: 500px; /* Definir el ancho deseado */
     height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -165,7 +165,7 @@ body {
 }
 
 #imgFutbolistaNivel2 {
-    max-width: 100%;
+    width: 500px; /* Definir el ancho deseado */
     height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
