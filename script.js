@@ -1,22 +1,23 @@
 // Nivel 1
 let futbolistasNivel1 = [
-    "ronaldo.jpg", "messi.jpg", "neymar.jpg", "aguirretxe.jpg", "duda.jpg",
-    "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"
+    "ronaldo.jpg", "messi.jpg", "neymar.jpg", "saviola.jpg", "duda.jpg",
+    "el-arabi.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "malouda.jpg", "güiza.jpg",
 ];
 
-let correctaNivel1 = [1, 1, 2, 1, 0, 1, 1, 1, 1, 1];
+let correctaNivel1 = [1, 1, 2, 1, 0, 1, 2, 1, 1, 0,2];
 
 let opcionesNivel1 = [
     ["Figo", "Cristiano Ronaldo", "Ronaldo Nazario"],
     ["Maradona", "Messi", "Riquelme"],
     ["Garrincha", "Romario", "Neymar"],
-    ["Zurutuza", "Aguirretxe", "Xabi Prieto"],
+    ["Saviello", "Saviola", "Savela"],
     ["Duda", "Hélder Postiga", "Raúl Meireles"],
-    ["Montoya", "Samper", "Aleñà"],
-    ["Adriano", "Douglas", "Paulinho"],
+    ["Elyounoussi", "El-Arabi", "Ounahi"],
+    ["Adriano", "Paulinho", "Douglas"],
     ["Canales", "Granero", "Negredo"],
     ["Sokratis", "Altintop", "Konoplyanka"],
-    ["Lenglet", "Mathieu", "Umtiti"]
+    ["Malouda", "Obi Mikel", "Ramires"],
+    ["Trigueros", "Morientes", "Güiza"],
 ];
 let posActualNivel1 = 0;
 let cantidadAcertadasNivel1 = 0;
@@ -26,18 +27,16 @@ let futbolistasNivel2 = [
     { nombre: "Arshavin", imagen: "img/arshavin.jpg" },
     { nombre: "Fred", imagen: "img/fred.jpg" },
     { nombre: "Guarín", imagen: "img/guarín.avif" },
-    { nombre: "El Arabi", imagen: "img/el-arabi.jpg" },
+    { nombre: "Samper", imagen: "img/samper.jpg" },
     { nombre: "Kanouté", imagen: "img/kanoute.jpg" },
-    { nombre: "Aguirretxe", imagen: "img/aguirretxe.jpg" },
     { nombre: "Verón", imagen: "img/verón.jpg" },
-    { nombre: "Güiza", imagen: "img/güiza.jpg" },
     { nombre: "Lescott", imagen: "img/lescott.jpg" },
-    { nombre: "Pizarro", imagen: "img/pizarro.jpg" },
-    { nombre: "Saviola", imagen: "img/saviola.jpg" },
+    { nombre: "Aguirretxe", imagen: "img/aguirretxe.jpg" },
     { nombre: "Borja Valero", imagen: "img/borja-valero.jpg" },
-    { nombre: "Ménez", imagen: "img/menez.jpg" },
-    { nombre: "Malouda", imagen: "img/malouda.jpg" },
+    { nombre: "Mathieu", imagen: "img/mathieu.jpg" },
     { nombre: "Eliseu", imagen: "img/eliseu.jpg" },
+    
+
     
     
 
@@ -112,10 +111,26 @@ function comprobarRespuestaNivel1(opElegida) {
 
 function mostrarPantallaFinalNivel1() {
     document.getElementById("pantalla-juego").style.display = "none";
-    document.getElementById("pantalla-final").style.display = "block";
-
+    const pantallaFinalNivel1 = document.getElementById("pantalla-final");
+    pantallaFinalNivel1.style.display = "block";
+    
     document.getElementById("numCorrectas").innerHTML = cantidadAcertadasNivel1;
     document.getElementById("numIncorrectas").innerHTML = futbolistasNivel1.length - cantidadAcertadasNivel1;
+
+    const numCorrectas = cantidadAcertadasNivel1;
+    const numIncorrectas = futbolistasNivel1.length - cantidadAcertadasNivel1;
+
+    const mensajeFinal = document.createElement("p");
+
+    if (numCorrectas >= 9) {
+        mensajeFinal.textContent += " ¡Increíble! Eres un experto en fútbol.";
+    } else if (numCorrectas >= 5) {
+        mensajeFinal.textContent += " ¡Bien hecho! Tienes buen conocimiento de fútbol.";
+    } else {
+        mensajeFinal.textContent += " ¡Sigue practicando! Puedes mejorar.";
+    }
+
+    pantallaFinalNivel1.appendChild(mensajeFinal);
 }
 
 function terminarJuegoNivel1() {
@@ -192,6 +207,22 @@ function mostrarPantallaFinalNivel2() {
 
     document.getElementById("numCorrectasNivel2").innerText = intentosCorrectosNivel2;
     document.getElementById("numIncorrectasNivel2").innerText = intentosIncorrectosNivel2;
+
+    const numCorrectasNivel2 = intentosCorrectosNivel2;
+    const numIncorrectasNivel2 = intentosIncorrectosNivel2;
+
+    const mensajeFinalNivel2 = document.createElement("p");
+    
+
+    if (numCorrectasNivel2 >= 9) {
+        mensajeFinalNivel2.textContent += " Eres un pedazo de friki";
+    } else if (numCorrectasNivel2 >= 5) {
+        mensajeFinalNivel2.textContent += "Tienes buen conocimiento de fútbol.";
+    } else {
+        mensajeFinalNivel2.textContent += "No sabes tanto del tema como te imaginabas...";
+    }
+
+    pantallaFinalNivel2.appendChild(mensajeFinalNivel2);
 }
 
 function volverAlInicioNivel2() {

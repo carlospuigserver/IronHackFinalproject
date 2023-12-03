@@ -20,6 +20,11 @@ body {
     font-size: 40px;
 }
 
+.frase-pequena {
+    font-size: 14px; /* Puedes ajustar el valor según tu preferencia */
+}
+
+
 #nivel-indicador {
     color: #580078;
     font-size: 24px;
