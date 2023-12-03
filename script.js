@@ -18,7 +18,6 @@ let opcionesNivel1 = [
     ["Sokratis", "Altintop", "Konoplyanka"],
     ["Lenglet", "Mathieu", "Umtiti"]
 ];
-
 let posActualNivel1 = 0;
 let cantidadAcertadasNivel1 = 0;
 
@@ -29,12 +28,22 @@ let futbolistasNivel2 = [
     { nombre: "Guarín", imagen: "img/guarín.avif" },
     { nombre: "El Arabi", imagen: "img/el-arabi.jpg" },
     { nombre: "Kanouté", imagen: "img/kanoute.jpg" },
-    { nombre: "Redondo", imagen: "img/redondo.jpg" },
-    { nombre: "Eusebio", imagen: "img/eusebio.jpg" },
+    { nombre: "Aguirretxe", imagen: "img/aguirretxe.jpg" },
     { nombre: "Verón", imagen: "img/verón.jpg" },
     { nombre: "Güiza", imagen: "img/güiza.jpg" },
     { nombre: "Lescott", imagen: "img/lescott.jpg" },
-    // Agrega los demás futbolistas con sus nombres e imágenes
+    { nombre: "Pizarro", imagen: "img/pizarro.jpg" },
+    { nombre: "Saviola", imagen: "img/saviola.jpg" },
+    { nombre: "Borja Valero", imagen: "img/borja-valero.jpg" },
+    { nombre: "Ménez", imagen: "img/menez.jpg" },
+    { nombre: "Malouda", imagen: "img/malouda.jpg" },
+    { nombre: "Eliseu", imagen: "img/eliseu.jpg" },
+    
+    
+
+
+
+
 ];
 
 let indiceFutbolistaNivel2 = 0;
