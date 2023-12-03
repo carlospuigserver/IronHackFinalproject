@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
-* {
-    box-sizing: border-box;
-    font-family: 'Mochiy Pop One';
-}
-
 body {
     background: url(img/fondo.jpg);
     background-size: cover;
@@ -13,28 +8,12 @@ body {
     background-color: #ADD8E6; /* Fondo azul celeste más claro */
 }
 
-h1 {
-    width: fit-content;
-    background-color: #fff;
-    margin: 60px auto;
-    border-radius: 60px;
-    box-shadow: 5px 5px 0 #000;
-    padding: 30px 40px;
+* {
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One';
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Pantalla inicial */
+/* Pantalla inicial nivel 1 */
 #pantalla-inicial {
     display: block;
     text-align: center;
@@ -68,7 +47,7 @@ footer {
     text-align: center;
 }
 
-.pantalla-juego img {
+#imgFutbolista {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
@@ -123,7 +102,10 @@ footer {
 
 /* Estilos para opciones correctas */
 .opcion.correcta .nombre,
-.opcion.correcta .letra {
+.opcion.correcta .letra,
+.nombreAcertada .nombre,
+.letraAcertada .letra,
+.correcto .nombre-input-nivel-2 input {
     background-color: #00FF00; /* Verde */
     color: #fff;
     box-shadow: 0 0 20px #00FF00;
@@ -131,7 +113,10 @@ footer {
 
 /* Estilos para opciones incorrectas */
 .opcion.incorrecta .nombre,
-.opcion.incorrecta .letra {
+.opcion.incorrecta .letra,
+.nombreNoAcertada .nombre,
+.letraNoAcertada .letra,
+.incorrecto .nombre-input-nivel-2 input {
     background-color: #FF0000; /* Rojo */
     color: #fff;
     box-shadow: 0 0 20px #FF0000;
@@ -161,20 +146,20 @@ footer {
     background-color: darkred;
 }
 
-/* PANTALLA INICIO */
+/* Pantalla inicio nivel 2 */
 #pantalla-inicial-nivel-2 {
     display: block;
     text-align: center;
     font-size: 40px;
 }
 
-#nivel-indicador {
+#nivel-indicador-nivel-2 {
     color: #580078;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-nivel-2 {
     border: none;
     background: #580078;
     color: #fff;
@@ -184,18 +169,18 @@ footer {
     transition: .5s;
 }
 
-.btn:hover {
+.btn-nivel-2:hover {
     transform: scale(1.1);
 }
 
-/* PANTALLA JUEGO 2*/
+/* Pantalla juego nivel 2 */
 .pantalla-juego-nivel-2 {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
 }
 
-.pantalla-juego-nivel-2 img {
+#imgFutbolistaNivel2 {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
@@ -205,8 +190,8 @@ footer {
 
 .nombre-input-nivel-2 {
     margin-top: 20px;
-    border-radius: 10px; /* Agrega bordes redondeados */
-    overflow: hidden; /* Evita que el borde redondeado afecte al botón */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .nombre-input-nivel-2 label {
@@ -219,8 +204,8 @@ footer {
     padding: 10px;
     font-size: 18px;
     width: 60%;
-    border: 1px solid #ddd; /* Borde gris para la entrada de texto */
-    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 .nombre-input-nivel-2 button {
@@ -233,17 +218,58 @@ footer {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease-in-out;
-    border-radius: 10px; /* Bordes redondeados */
 }
 
 .nombre-input-nivel-2 button:hover {
     background-color: #401050;
 }
 
-.nombre-input-nivel-2.correcto input {
-    border-color: #00FF00; /* Borde verde si es correcto */
+.nombre-input-nivel-2 .correcto input {
+    border-color: #00FF00;
 }
 
-.nombre-input-nivel-2.incorrecto input {
-    border-color: #FF0000; /* Borde rojo si es incorrecto */
+.nombre-input-nivel-2 .incorrecto input {
+    border-color: #FF0000;
+}
+
+/* Estilos para opciones correctas nivel 2 */
+.opcion-nivel-2.correcta .nombre-nivel-2,
+.opcion-nivel-2.correcta .letra-nivel-2,
+.correcto .nombre-input-nivel-2 input {
+    background-color: #00FF00; /* Verde */
+    color: #fff;
+    box-shadow: 0 0 20px #00FF00;
+}
+
+/* Estilos para opciones incorrectas nivel 2 */
+.opcion-nivel-2.incorrecta .nombre-nivel-2,
+.opcion-nivel-2.incorrecta .letra-nivel-2,
+.incorrecto .nombre-input-nivel-2 input {
+    background-color: #FF0000; /* Rojo */
+    color: #fff;
+    box-shadow: 0 0 20px #FF0000;
+}
+
+/* Pantalla final nivel 2 */
+#pantalla-final-nivel-2 {
+    display: none;
+    text-align: center;
+}
+
+#pantalla-final-nivel-2 #numCorrectasNivel2,
+#pantalla-final-nivel-2 #numIncorrectasNivel2 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin: 10px;
+}
+
+#pantalla-final-nivel-2 #numCorrectasNivel2 {
+    background-color: chartreuse;
+}
+
+#pantalla-final-nivel-2 #numIncorrectasNivel2 {
+    background-color: darkred;
 }

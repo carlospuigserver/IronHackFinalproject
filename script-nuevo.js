@@ -4,7 +4,7 @@ let futbolistasNivel1 = [
     "samper.jpg", "douglas.jpg", "granero.jpg", "altintop.jpg", "mathieu.jpg"
 ];
 
-let correctaNivel1 = [1, 1, 2, 1, 1, 1, 1, 1, 1, 1];
+let correctaNivel1 = [1, 1, 2, 1, 0, 1, 1, 1, 1, 1];
 
 let opcionesNivel1 = [
     ["Figo", "Cristiano Ronaldo", "Ronaldo Nazario"],
