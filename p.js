@@ -44,18 +44,18 @@ let intentosIncorrectosNivel2 = 0;
 // Nivel 3
 let futbolistasNivel3 = [
     { nombre: "Zidane", imagen: "img/zidane.jpg" },
-    { nombre: "Baresi", imagen: "ruta de la imagen" }, // Agrega la ruta de la imagen correspondiente
-    { nombre: "Laudrup", imagen: "ruta de la imagen" },
-    { nombre: "Beckham", imagen: "ruta de la imagen" },
-    { nombre: "Bergkamp", imagen: "ruta de la imagen" },
-    { nombre: "Redondo", imagen: "ruta de la imagen" },
-    { nombre: "Puskás", imagen: "ruta de la imagen" },
-    { nombre: "Luis Suárez", imagen: "ruta de la imagen" },
-    { nombre: "Zico", imagen: "ruta de la imagen" },
-    { nombre: "Platini", imagen: "ruta de la imagen" },
-    { nombre: "Weah", imagen: "ruta de la imagen" },
-    { nombre: "Cantona", imagen: "ruta de la imagen" },
-    // Agrega más futbolistas según sea necesario
+    { nombre: "Baresi", imagen: "img/baresi.jpg" }, // Agrega la ruta de la imagen correspondiente
+    { nombre: "Laudrup", imagen: "img/laudrup.jpg" },
+    { nombre: "Beckham", imagen: "img/beckham.jpg" },
+    { nombre: "Bergkamp", imagen: "img/bergkamp.jpg" },
+    { nombre: "Redondo", imagen: "img/redondo.jpg" },
+    { nombre: "Puskás", imagen: "img/puskas.jpg" },
+    { nombre: "Henry", imagen: "img/henry.jpg" },
+    { nombre: "Garrincha", imagen: "img/garrincha.jpg" },
+    { nombre: "Platini", imagen: "img/platini.jpg" },
+    { nombre: "Weah", imagen: "img/weah.jpg" },
+    { nombre: "Cantona", imagen: "img/cantona.jpg" },
+
 ];
 
 
@@ -285,6 +285,7 @@ function comenzarJuegoNivel3() {
 }
 
 function mostrarFutbolistaNivel3() {
+    
     const imgElementNivel3 = document.getElementById("imgFutbolistaNivel3");
     imgElementNivel3.src = futbolistasNivel3[indiceFutbolistaNivel3].imagen;
     document.getElementById("nombreFutbolistaNivel3").value = "";
@@ -346,6 +347,9 @@ function volverAlInicioNivel3() {
 
     ocultarMostrarPantallas("pantalla-final-nivel-3", "pantalla-inicial");
 }
+
+// Event Listeners
+
 
 
 // Event Listeners
