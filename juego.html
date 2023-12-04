@@ -251,35 +251,11 @@
     <h2>Resultados (Nivel 2)</h2>
     <p>Correctas: <span id="numCorrectasNivel2">0</span></p>
     <p>Incorrectas: <span id="numIncorrectasNivel2">0</span></p>
-    <button class="btn" onclick="irAlSiguienteNivel3()">Siguiente nivel</button>
+    <button class="btn" onclick="volverAlInicioNivel2()">Volver al inicio</button>
 </div>
 
-<!-- Pantalla inicial Nivel 3 -->
-<div id="pantalla-inicial-nivel-3" style="display: none;">
-    <p>¿Adivinas quién soy? (Nivel 3)</p>
-    <p>Ahora veremos si eres experto...</p>
-    <button class="btn" onclick="comenzarJuegoNivel3()">COMENZAR A JUGAR (Nivel 3)</button>
-</div>
 
-<!-- Pantalla juego Nivel 3 -->
-<div class="pantalla-juego-nivel-3" id="pantalla-juego-nivel-3" style="display: none;">
-    <img src="" alt="" id="imgFutbolistaNivel3">
-    <div class="nombre-input">
-        <label for="nombreFutbolistaNivel3">Escribe el nombre del futbolista:</label>
-        <input type="text" id="nombreFutbolistaNivel3" placeholder="Nombre">
-        <button id="btnComprobarNivel3">Comprobar</button>
-    </div>
-</div>
-
-<!-- Pantalla final Nivel 3 -->
-<div id="pantalla-final-nivel-3" style="display: none;">
-    <h2>Resultados (Nivel 3)</h2>
-    <p>Correctas: <span id="numCorrectasNivel3">0</span></p>
-    <p>Incorrectas: <span id="numIncorrectasNivel3">0</span></p>
-    <button class="btn" onclick="volverAlInicioNivel3()">Volver al inicio</button>
-</div>
-
-<script src="p.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
